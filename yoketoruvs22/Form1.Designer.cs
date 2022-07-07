@@ -29,73 +29,108 @@ namespace yoketoruvs22
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.startButton = new System.Windows.Forms.Button();
+            this.copyrightLabel = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.leftLabel = new System.Windows.Forms.Label();
+            this.hiLabel = new System.Windows.Forms.Label();
+            this.gameOverLabel = new System.Windows.Forms.Label();
+            this.clearLabel = new System.Windows.Forms.Label();
+            this.titleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(146, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 89);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "よけとる２０２２";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Garamond", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titleLabel.Location = new System.Drawing.Point(189, 66);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(423, 76);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "よけとる２０２２";
             // 
-            // button1
+            // startButton
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(295, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 134);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "スタート！";
-            this.button1.UseVisualStyleBackColor = false;
+            this.startButton.BackColor = System.Drawing.Color.DarkRed;
+            this.startButton.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.startButton.Location = new System.Drawing.Point(295, 231);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(210, 134);
+            this.startButton.TabIndex = 1;
+            this.startButton.Text = "スタート！";
+            this.startButton.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // copyrightLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(316, 414);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Copyright@ ２０２２　高橋涼";
+            this.copyrightLabel.AutoSize = true;
+            this.copyrightLabel.Location = new System.Drawing.Point(316, 414);
+            this.copyrightLabel.Name = "copyrightLabel";
+            this.copyrightLabel.Size = new System.Drawing.Size(169, 15);
+            this.copyrightLabel.TabIndex = 2;
+            this.copyrightLabel.Text = "Copyright@ ２０２２　高橋涼";
             // 
-            // label3
+            // timeLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(2, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 37);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Time 100";
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.timeLabel.Location = new System.Drawing.Point(2, 9);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(127, 37);
+            this.timeLabel.TabIndex = 3;
+            this.timeLabel.Text = "Time 100";
             // 
-            // label4
+            // leftLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(708, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 37);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "★:10";
+            this.leftLabel.AutoSize = true;
+            this.leftLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.leftLabel.Location = new System.Drawing.Point(708, 9);
+            this.leftLabel.Name = "leftLabel";
+            this.leftLabel.Size = new System.Drawing.Size(80, 37);
+            this.leftLabel.TabIndex = 4;
+            this.leftLabel.Text = "★:10";
             // 
-            // label5
+            // hiLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(259, 162);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(282, 54);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "HighScore 100";
+            this.hiLabel.AutoSize = true;
+            this.hiLabel.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.hiLabel.Location = new System.Drawing.Point(259, 162);
+            this.hiLabel.Name = "hiLabel";
+            this.hiLabel.Size = new System.Drawing.Size(282, 54);
+            this.hiLabel.TabIndex = 5;
+            this.hiLabel.Text = "HighScore 100";
+            // 
+            // gameOverLabel
+            // 
+            this.gameOverLabel.AutoSize = true;
+            this.gameOverLabel.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gameOverLabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.gameOverLabel.Location = new System.Drawing.Point(224, 162);
+            this.gameOverLabel.Name = "gameOverLabel";
+            this.gameOverLabel.Size = new System.Drawing.Size(352, 89);
+            this.gameOverLabel.TabIndex = 6;
+            this.gameOverLabel.Text = "GameOver";
+            // 
+            // clearLabel
+            // 
+            this.clearLabel.AutoSize = true;
+            this.clearLabel.Font = new System.Drawing.Font("Yu Gothic UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clearLabel.ForeColor = System.Drawing.Color.Red;
+            this.clearLabel.Location = new System.Drawing.Point(241, 148);
+            this.clearLabel.Name = "clearLabel";
+            this.clearLabel.Size = new System.Drawing.Size(319, 106);
+            this.clearLabel.TabIndex = 7;
+            this.clearLabel.Text = "CLEAR!!";
+            // 
+            // titleButton
+            // 
+            this.titleButton.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.titleButton.Location = new System.Drawing.Point(295, 231);
+            this.titleButton.Name = "titleButton";
+            this.titleButton.Size = new System.Drawing.Size(210, 134);
+            this.titleButton.TabIndex = 8;
+            this.titleButton.Text = "タイトルへ";
+            this.titleButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -103,12 +138,15 @@ namespace yoketoruvs22
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.titleButton);
+            this.Controls.Add(this.clearLabel);
+            this.Controls.Add(this.gameOverLabel);
+            this.Controls.Add(this.hiLabel);
+            this.Controls.Add(this.leftLabel);
+            this.Controls.Add(this.timeLabel);
+            this.Controls.Add(this.copyrightLabel);
+            this.Controls.Add(this.startButton);
+            this.Controls.Add(this.titleLabel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -119,12 +157,15 @@ namespace yoketoruvs22
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Label copyrightLabel;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label leftLabel;
+        private System.Windows.Forms.Label hiLabel;
+        private System.Windows.Forms.Label gameOverLabel;
+        private System.Windows.Forms.Label clearLabel;
+        private System.Windows.Forms.Button titleButton;
     }
 }
 
