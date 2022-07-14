@@ -64,12 +64,15 @@ namespace yoketoruvs22
                 {
                     chrs[i].Text = ItemText;
                 }
+                chrs[i].Font = tempLabel.Font;
                 Controls.Add(chrs[i]);
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+
             if (nextState != State.None)
             {
                 initProc();
@@ -90,10 +93,12 @@ namespace yoketoruvs22
             if(currentState==State.Game)
             {
                 UpdateGame();
+/*
                 Point spos = MousePosition;
                 Point fpos = PointToClient(spos);
                 PlayerText.Left = fpos.X - PlayerText.Width / 2;
                 PlayerText.Top = fpos.Y - PlayerText.Height / 2;
+*/
             }
         }
 
@@ -101,7 +106,7 @@ namespace yoketoruvs22
         {
             Point mp = PointToClient(MousePosition);
 
-
+            
 
         }
 
