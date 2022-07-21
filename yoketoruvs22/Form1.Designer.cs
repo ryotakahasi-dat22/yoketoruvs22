@@ -41,13 +41,14 @@ namespace yoketoruvs22
             this.titleButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tempLabel = new System.Windows.Forms.Label();
+            this.Saibutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Garamond", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titleLabel.Location = new System.Drawing.Point(189, 66);
+            this.titleLabel.Location = new System.Drawing.Point(189, 48);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(423, 76);
             this.titleLabel.TabIndex = 0;
@@ -77,10 +78,10 @@ namespace yoketoruvs22
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.timeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.timeLabel.Location = new System.Drawing.Point(2, 9);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(127, 37);
+            this.timeLabel.Size = new System.Drawing.Size(216, 62);
             this.timeLabel.TabIndex = 3;
             this.timeLabel.Text = "Time 100";
             // 
@@ -145,13 +146,26 @@ namespace yoketoruvs22
             // tempLabel
             // 
             this.tempLabel.AutoSize = true;
-            this.tempLabel.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tempLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tempLabel.Font = new System.Drawing.Font("Yu Gothic UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tempLabel.Location = new System.Drawing.Point(38, 126);
             this.tempLabel.Name = "tempLabel";
-            this.tempLabel.Size = new System.Drawing.Size(105, 89);
+            this.tempLabel.Size = new System.Drawing.Size(54, 46);
             this.tempLabel.TabIndex = 9;
             this.tempLabel.Text = "★";
             this.tempLabel.Visible = false;
+            // 
+            // Saibutton
+            // 
+            this.Saibutton.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Saibutton.Location = new System.Drawing.Point(583, 240);
+            this.Saibutton.Name = "Saibutton";
+            this.Saibutton.Size = new System.Drawing.Size(174, 134);
+            this.Saibutton.TabIndex = 10;
+            this.Saibutton.Text = "再挑戦";
+            this.Saibutton.UseVisualStyleBackColor = true;
+            this.Saibutton.Visible = false;
+            this.Saibutton.Click += new System.EventHandler(this.Saibutton_Click);
             // 
             // Form1
             // 
@@ -159,6 +173,7 @@ namespace yoketoruvs22
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Saibutton);
             this.Controls.Add(this.tempLabel);
             this.Controls.Add(this.titleButton);
             this.Controls.Add(this.clearLabel);
@@ -190,6 +205,7 @@ namespace yoketoruvs22
         private System.Windows.Forms.Button titleButton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label tempLabel;
+        private System.Windows.Forms.Button Saibutton;
     }
 }
 
