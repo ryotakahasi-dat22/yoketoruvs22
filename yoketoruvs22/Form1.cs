@@ -18,8 +18,8 @@ namespace yoketoruvs22
         const int SpeedMax = 10;
         const int PlayerMax = 1;
         const int EnemyMax = 10;
-        const int ItemMax = 20;
-        int itemCount;
+        const int ItemMax = 19;
+        int itemCount=0;
         const int ChrMax = PlayerMax + EnemyMax + ItemMax;
         Label[] chrs = new Label[ChrMax];
         int[] vx = new int[ChrMax];
@@ -27,12 +27,15 @@ namespace yoketoruvs22
         const int PlayerIndex = 0;
         const int EnemyIndex = PlayerMax+PlayerMax;
         const int ItemIndex = EnemyMax+EnemyMax;
+        const int StartTime = 100;
 
         const string PlayerText = "('ω')";
         const string EnemyText = "◆";
         const string ItemText = "★";
 
         static Random rand = new Random();
+
+        int time = 0;
 
         enum State
         {
@@ -103,12 +106,18 @@ namespace yoketoruvs22
 
         void UpdateGame()
         {
+            time--;
+            timeLabel.Text = "Time" + time;
+
             Point mp = PointToClient(MousePosition);
 
             chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
             chrs[PlayerIndex].Top = mp.Y - chrs[PlayerIndex].Height / 2;
-            
-            for(int i =EnemyIndex;i<ChrMax;i++)
+            //クリックしたところに移動
+            /*chrs[PlayerIndex].Left = Convert.ToString(e.Location);
+            chrs[PlayerIndex].Top = Convert.ToString(e.Location);
+            PlayerText.Top += vy[i];*/
+            for (int i =EnemyIndex;i<ChrMax;i++)
             {
                 chrs[i].Left += vx[i];
                 chrs[i].Top += vy[i];
@@ -142,9 +151,16 @@ namespace yoketoruvs22
                     }
                     else
                     {
-                        chrs[i].Visible = false;
+                        //chrs[i].Visible = false;
                         itemCount--;
+                        if(itemCount<=0)
+                        {
+                            nextState = State.Clear;
+                        }
                         leftLabel.Text = $"★:{itemCount:00}";
+                        vx[i] = 0;
+                        vy[i] = 0;
+                        chrs[i].Left = 10000;
                     }
                 }
             }
@@ -165,6 +181,7 @@ namespace yoketoruvs22
                     gameOverLabel.Visible = false;
                     clearLabel.Visible = false;
                     titleButton.Visible = false;
+                    Saibutton.Visible = false;
                     break;
 
                 case State.Game:
@@ -181,6 +198,9 @@ namespace yoketoruvs22
                         vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                     }
+
+                    itemCount = ItemMax-9;
+                    time = StartTime;
 
                     break;
 
@@ -212,9 +232,15 @@ namespace yoketoruvs22
         private void Saibutton_Click(object sender, EventArgs e)
         {
             nextState = State.Game;
+            leftLabel.Text = ("★:10");
             gameOverLabel.Visible = false;
             titleButton.Visible = false;
             Saibutton.Visible = false;
+        }
+
+        private void titleButton_Click(object sender, EventArgs e)
+        {
+            nextState = State.Title;
         }
     }
 }
