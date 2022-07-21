@@ -114,9 +114,9 @@ namespace yoketoruvs22
             chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
             chrs[PlayerIndex].Top = mp.Y - chrs[PlayerIndex].Height / 2;
             //クリックしたところに移動
-            /*chrs[PlayerIndex].Left = Convert.ToString(e.Location);
-            chrs[PlayerIndex].Top = Convert.ToString(e.Location);
-            PlayerText.Top += vy[i];*/
+            //chrs[PlayerIndex].Left = Convert.ToString(Form1.X);
+            //chrs[PlayerIndex].Top = Convert.ToString(Form1.Y);
+            //chrs[PlayerIndex].Top += vy[i];
             for (int i =EnemyIndex;i<ChrMax;i++)
             {
                 chrs[i].Left += vx[i];
@@ -164,6 +164,12 @@ namespace yoketoruvs22
                     }
                 }
             }
+
+            if (  (time<=0)
+                &&(nextState ==State.None))
+            {
+                nextState = State.Gameover;
+            }
         }
 
         void initProc()
@@ -200,7 +206,7 @@ namespace yoketoruvs22
                     }
 
                     itemCount = ItemMax-9;
-                    time = StartTime;
+                    time = StartTime+1;
 
                     break;
 
