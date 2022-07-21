@@ -189,6 +189,12 @@ namespace yoketoruvs22
                     clearLabel.Visible = false;
                     titleButton.Visible = false;
                     Saibutton.Visible = false;
+                    for (int i = EnemyIndex; i < ChrMax; i++)
+                    {
+                        chrs[i].Visible = false;
+                    }
+                    chrs[PlayerIndex].Visible = false;
+                    timeLabel.Text = "Time 100";
                     break;
 
                 case State.Game:
@@ -196,7 +202,8 @@ namespace yoketoruvs22
                     hiLabel.Visible = false;
                     copyrightLabel.Visible = false;
                     startButton.Visible = false;
-                    
+                    chrs[PlayerIndex].Visible = true;
+
 
                     for (int i =EnemyIndex;i<ChrMax;i++)
                     {
@@ -204,10 +211,12 @@ namespace yoketoruvs22
                         chrs[i].Top = rand.Next(ClientSize.Height - chrs[i].Height);
                         vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
+                        chrs[i].Visible = true;
                     }
 
                     itemCount = ItemMax-9;
                     time = StartTime+1;
+                    leftLabel.Text = $"★:{itemCount:00}";
 
                     break;
 
@@ -226,6 +235,11 @@ namespace yoketoruvs22
                         hiscore = time;
                         hiLabel.Text = "HighScore" + hiscore;
                     }
+                    for (int i = EnemyIndex; i < ChrMax; i++)
+                    {
+                        chrs[i].Visible = false;
+                    }
+                    chrs[PlayerIndex].Visible = false;
                     break;
 
             }

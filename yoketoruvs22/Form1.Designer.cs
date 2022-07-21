@@ -99,7 +99,7 @@ namespace yoketoruvs22
             // 
             this.hiLabel.AutoSize = true;
             this.hiLabel.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.hiLabel.Location = new System.Drawing.Point(259, 162);
+            this.hiLabel.Location = new System.Drawing.Point(281, 162);
             this.hiLabel.Name = "hiLabel";
             this.hiLabel.Size = new System.Drawing.Size(238, 54);
             this.hiLabel.TabIndex = 5;
@@ -110,7 +110,7 @@ namespace yoketoruvs22
             this.gameOverLabel.AutoSize = true;
             this.gameOverLabel.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gameOverLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.gameOverLabel.Location = new System.Drawing.Point(224, 162);
+            this.gameOverLabel.Location = new System.Drawing.Point(215, 162);
             this.gameOverLabel.Name = "gameOverLabel";
             this.gameOverLabel.Size = new System.Drawing.Size(352, 89);
             this.gameOverLabel.TabIndex = 6;
