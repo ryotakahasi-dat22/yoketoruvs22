@@ -118,7 +118,7 @@ namespace yoketoruvs22
                 }
                 if (chrs[i].Top < 0)
                 {
-                    vx[i] = Math.Abs(vy[i]);
+                    vy[i] = Math.Abs(vy[i]);
                 }
                 if (chrs[i].Right > ClientSize.Width)
                 {
@@ -126,7 +126,16 @@ namespace yoketoruvs22
                 }
                 if (chrs[i].Bottom > ClientSize.Height)
                 {
-                    vx[i] = -Math.Abs(vy[i]);
+                    vy[i] = -Math.Abs(vy[i]);
+                }
+
+                if(   (mp.X >= chrs[i].Left)
+                    &&(mp.X < chrs[i].Right)
+                    &&(mp.Y >= chrs[i].Top)
+                    &&(mp.Y < chrs[i].Bottom)
+                    )
+                {
+                    MessageBox.Show("重なった");
                 }
             }
         }
