@@ -18,7 +18,8 @@ namespace yoketoruvs22
         const int SpeedMax = 10;
         const int PlayerMax = 1;
         const int EnemyMax = 10;
-        const int ItemMax = 10;
+        const int ItemMax = 20;
+        int itemCount;
         const int ChrMax = PlayerMax + EnemyMax + ItemMax;
         Label[] chrs = new Label[ChrMax];
         int[] vx = new int[ChrMax];
@@ -135,7 +136,16 @@ namespace yoketoruvs22
                     &&(mp.Y < chrs[i].Bottom)
                     )
                 {
-                    MessageBox.Show("重なった");
+                    if(i< ItemIndex)
+                    {
+                        nextState = State.Gameover;
+                    }
+                    else
+                    {
+                        chrs[i].Visible = false;
+                        itemCount--;
+                        leftLabel.Text = $"★:{itemCount:00}";
+                    }
                 }
             }
         }
