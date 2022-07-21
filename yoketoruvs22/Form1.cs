@@ -19,7 +19,6 @@ namespace yoketoruvs22
         const int PlayerMax = 1;
         const int EnemyMax = 10;
         const int ItemMax = 19;
-        int itemCount=0;
         const int ChrMax = PlayerMax + EnemyMax + ItemMax;
         Label[] chrs = new Label[ChrMax];
         int[] vx = new int[ChrMax];
@@ -35,7 +34,9 @@ namespace yoketoruvs22
 
         static Random rand = new Random();
 
+        int itemCount = 0;
         int time = 0;
+        int hiscore = 0;
 
         enum State
         {
@@ -220,6 +221,11 @@ namespace yoketoruvs22
                     clearLabel.Visible = true;
                     titleButton.Visible = true;
                     hiLabel.Visible = true;
+                    if(time>hiscore)
+                    {
+                        hiscore = time;
+                        hiLabel.Text = "HighScore" + hiscore;
+                    }
                     break;
 
             }

@@ -101,9 +101,9 @@ namespace yoketoruvs22
             this.hiLabel.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.hiLabel.Location = new System.Drawing.Point(259, 162);
             this.hiLabel.Name = "hiLabel";
-            this.hiLabel.Size = new System.Drawing.Size(282, 54);
+            this.hiLabel.Size = new System.Drawing.Size(238, 54);
             this.hiLabel.TabIndex = 5;
-            this.hiLabel.Text = "HighScore 100";
+            this.hiLabel.Text = "HighScore 0";
             // 
             // gameOverLabel
             // 
@@ -121,7 +121,7 @@ namespace yoketoruvs22
             this.clearLabel.AutoSize = true;
             this.clearLabel.Font = new System.Drawing.Font("Yu Gothic UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clearLabel.ForeColor = System.Drawing.Color.Red;
-            this.clearLabel.Location = new System.Drawing.Point(241, 148);
+            this.clearLabel.Location = new System.Drawing.Point(237, 56);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(319, 106);
             this.clearLabel.TabIndex = 7;
