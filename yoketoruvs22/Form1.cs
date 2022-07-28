@@ -119,8 +119,8 @@ namespace yoketoruvs22
 
             Point mp = PointToClient(MousePosition);
 
-            //chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
-            //chrs[PlayerIndex].Top = mp.Y - chrs[PlayerIndex].Height / 2;
+            chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
+            chrs[PlayerIndex].Top = mp.Y - chrs[PlayerIndex].Height / 2;
             //クリックしたところに移動
             //chrs[PlayerIndex].Left = Convert.ToString(Form1.x);
             //chrs[PlayerIndex].Top = Convert.ToString(Form1.y);
