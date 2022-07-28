@@ -57,6 +57,13 @@ namespace yoketoruvs22
         {
             InitializeComponent();
 
+            /*Form form = new Form();
+            form.Show();
+
+            Point point = form.Location;
+            int x =point.X;
+            int y =point.Y;*/
+
             for(int i = 0;i<ChrMax;i++)
             {
                 chrs[i] = new Label();
@@ -112,11 +119,11 @@ namespace yoketoruvs22
 
             Point mp = PointToClient(MousePosition);
 
-            chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
-            chrs[PlayerIndex].Top = mp.Y - chrs[PlayerIndex].Height / 2;
+            //chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
+            //chrs[PlayerIndex].Top = mp.Y - chrs[PlayerIndex].Height / 2;
             //クリックしたところに移動
-            //chrs[PlayerIndex].Left = Convert.ToString(Form1.X);
-            //chrs[PlayerIndex].Top = Convert.ToString(Form1.Y);
+            //chrs[PlayerIndex].Left = Convert.ToString(Form1.x);
+            //chrs[PlayerIndex].Top = Convert.ToString(Form1.y);
             //chrs[PlayerIndex].Top += vy[i];
             for (int i =EnemyIndex;i<ChrMax;i++)
             {
